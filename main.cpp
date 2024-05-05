@@ -58,6 +58,12 @@ int wmain(int argc, wchar_t** argv) {
 			std::println("[WARNING] Some of the passed paths were invalid.\nProcessing the ones that are fine.");
 		}
 	} else {
+		std::println("=============================================================");
+		std::println("You can use this program as a command line tool, e.g.:");
+		std::println("`> app.exe <AmountOfFilesToPick> <Path1> [Path2] [Path3] ...`");
+		std::println("Supports any amount of passed paths.");
+		std::println("=============================================================\n");
+		
 		std::println("Enter a number of files you want to randomly pick [1..32]");
 		
 arg_1: // I see you cringe :)
