@@ -42,12 +42,10 @@ int wmain(int argc, wchar_t** argv) {
 	std::vector<std::wstring> list_of_paths;
 	
 	size_t num_of_elems = 0;
-	size_t i = 0;
 	if (argc >= 3) {
 		try {
 			num_of_elems = std::stoi(argv[1]);
 		} catch(...) {}
-		i = (num_of_elems == 0) ? 1 : 2;
 
 		for(size_t ind = 2; ind < argc; ind++) {
 			if(!std::filesystem::exists(argv[ind])) {
@@ -128,7 +126,6 @@ arg_1: // I see you cringe :)
 	if (num_of_elems == 0) {
 		num_of_elems = 1;
 	}
-
 	num_of_elems = std::min(num_of_elems, file_paths.size());
 	
 	std::vector<std::filesystem::path> found_files;
