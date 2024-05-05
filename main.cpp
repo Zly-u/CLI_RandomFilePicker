@@ -1,16 +1,11 @@
-#include <array>
 #include <filesystem>
 #include <iostream>
 #include <print>
 #include <random>
-
-#include <fcntl.h>
 #include <map>
 #include <ranges>
-#include <vcruntime_startup.h>
 
 #include <shlobj_core.h>
-#include "Windows.h"
 
 #undef max
 #undef min
@@ -30,6 +25,7 @@ constexpr void trim(std::wstring& s) {
 		std::ranges::find_if(s, not_space)
 	);
 }
+
 
 int wmain(int argc, wchar_t** argv) {
 	SetConsoleCP(65001);
